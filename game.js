@@ -14,7 +14,7 @@ $(document).keypress(function() {
   }
 });
 
-//the button that you click to choose the color 
+//the button that you click to choose the color of the new pattern 
 $(".btn").click(function() {
 
   var userChosenColour = $(this).attr("id");
@@ -23,12 +23,12 @@ $(".btn").click(function() {
   playSound(userChosenColour);
   animatePress(userChosenColour);
 
-  //2. Call checkAnswer() after a user has clicked and chosen their answer, passing in the index of the last answer in the user's sequence.
+  //Call checkAnswer() after a user has clicked and chosen their answer, passing in the index of the last answer in the user's sequence.
   checkAnswer(userClickedPattern.length-1);
 });
 
 
-//1. Create a new function called checkAnswer(), it should take one input with the name currentLevel
+//Created a new function called checkAnswer(), it should take one input with the name currentLevel
 function checkAnswer(currentLevel) {
 
     //3. Write an if statement inside checkAnswer() to check if the most recent user answer is the same as the game pattern. If so then log "success", otherwise log "wrong".
