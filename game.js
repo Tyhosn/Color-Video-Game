@@ -14,6 +14,7 @@ $(document).keypress(function() {
   }
 });
 
+//the button that you click to choose 
 $(".btn").click(function() {
 
   var userChosenColour = $(this).attr("id");
